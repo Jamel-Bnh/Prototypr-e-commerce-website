@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - TechShop</title>
+    <link rel="stylesheet" href="/css/prod.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <h1><i class="fas fa-laptop"></i> TechShop</h1>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un produit...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                        <span class="cart-text">Panier</span>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="navbar">
+                <div class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/Html/index.html">Accueil</a></li>
+                    <li><a href="/Html/cart.html">Panier</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-header">
+                <h1>Contactez-nous</h1>
+                <p>Nous sommes là pour vous aider. N'hésitez pas à nous contacter pour toute question.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Adresse</h3>
+                        <p>Avenue Habib Bourguiba<br>1000 Tunis, Tunisie</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Téléphone</h3>
+                        <p>+216 70 123 456<br>+216 71 987 654</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>contact@TechShop.tn<br>support@TechShop.tn</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Horaires</h3>
+                        <p>Lun - Ven: 9h - 18h<br>Sam: 9h - 13h</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" onsubmit="submitContactForm(event)">
+                        <h2>Envoyez-nous un message</h2>
+                        
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Sujet *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Choisissez un sujet</option>
+                                <option value="commande">Question sur une commande</option>
+                                <option value="produit">Information produit</option>
+                                <option value="livraison">Livraison</option>
+                                <option value="retour">Retour/Échange</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                            <span class="error-message" id="subjectError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Décrivez votre demande..."></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Je souhaite recevoir la newsletter
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Questions fréquentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Quels sont les délais de livraison ?</h3>
+                    <p>Nous livrons partout en Tunisie sous 2-5 jours ouvrables selon votre région.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Puis-je retourner un produit ?</h3>
+                    <p>Oui, vous avez 30 jours pour retourner un produit en parfait état.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Acceptez-vous les paiements en espèces ?</h3>
+                    <p>Oui, nous acceptons le paiement à la livraison ainsi que les cartes bancaires.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Offrez-vous une garantie ?</h3>
+                    <p>Tous nos produits bénéficient d'une garantie constructeur de 1 à 2 ans.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechShop</h3>
+                    <p>Votre partenaire high-tech de confiance en Tunisie depuis 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="/Html/index.html">Accueil</a></li>
+                        <li><a href="/Html/cart.html">Panier</a></li>
+                        <li><a href="/Html/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> +216 70 123 456</p>
+                    <p><i class="fas fa-envelope"></i> contact@TechShop.tn</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

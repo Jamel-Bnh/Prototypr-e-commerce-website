@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShop - Votre boutique high-tech en Tunisie</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="/Html/index.html">
+                        <i class="fas fa-laptop"></i> TechShop
+                    </a>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un produit...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <div class="user-menu">
+                        <a href="/auth/login.html" class="login"><i class="fas fa-user"></i> Connexion</a>
+                        <a href="/auth/sign-up.html" class="register"><i class="fas fa-user-plus"></i> Inscription</a>
+                        <div class="header-actions">
+                            <div class="cart-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-count">0</span>
+                                <a href="/Html/cart.html"><span class="cart-text">Panier</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navbar">
+                <div class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/Html/index.html">Accueil</a></li>
+                    <li><a href="/Html/product.html">Produits</a></li>
+                    <li><a href="/Html/cart.html">Panier</a></li>
+                    <li><a href="/Html/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Les meilleures offres high-tech en Tunisie</h2>
+                <p>Découvrez notre sélection d'ordinateurs, smartphones et accessoires aux meilleurs prix</p>
+                <button class="cta-button">Voir les offres</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2>Nos Catégories</h2>
+            <div class="category-grid">
+                <div class="category-card" onclick="filterProducts('laptop')">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Ordinateurs</h3>
+                    <p>Portables & Fixes</p>
+                </div>
+                <div class="category-card" onclick="filterProducts('smartphone')">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Smartphones</h3>
+                    <p>Derniers modèles</p>
+                </div>
+                <div class="category-card" onclick="filterProducts('accessoire')">
+                    <i class="fas fa-headphones"></i>
+                    <h3>Accessoires</h3>
+                    <p>Audio & Gaming</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos Produits</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterProducts('all')">Tous</button>
+                    <button class="filter-btn" onclick="filterProducts('laptop')">Ordinateurs</button>
+                    <button class="filter-btn" onclick="filterProducts('smartphone')">Smartphones</button>
+                    <button class="filter-btn" onclick="filterProducts('accessoire')">Accessoires</button>
+                </div>
+            </div>
+
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Restez informé de nos offres</h2>
+                <p>Inscrivez-vous à notre newsletter pour recevoir les meilleures promotions</p>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" placeholder="Votre adresse email" required>
+                    <button type="submit">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechShop</h3>
+                    <p>Votre partenaire high-tech de confiance en Tunisie depuis 2020.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="/Html/index.html">Accueil</a></li>
+                        <li><a href="/Html/cart.html">Panier</a></li>
+                        <li><a href="/Html/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> +216 70 123 456</p>
+                    <p><i class="fas fa-envelope"></i> contact@TechShop.tn</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Tunis, Tunisie</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechShop. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js" defer></script>
+</body>
+
+</html>

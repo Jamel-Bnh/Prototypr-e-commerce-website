@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - TechShop</title>
+    <link rel="stylesheet" href="/css/prod.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="/Html/index.html"></a><h1><i class="fas fa-laptop"></i> TechShop</h1>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un produit...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                        <span class="cart-text">Panier</span>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="navbar">
+                <div class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/Html/index.html">Accueil</a></li>
+                    <li><a href="/Html/cart.html" class="active">Panier</a></li>
+                    <li><a href="/Html/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cart Content -->
+    <section class="cart-section">
+        <div class="container">
+            <h1>Mon Panier</h1>
+            <div class="cart-content">
+                <div class="cart-items" id="cartItems" style="margin-top: 40px;">
+                    <!-- Cart items will be loaded by JavaScript -->
+                </div>
+                
+                <div class="cart-summary" style="margin-top: 40px;">
+                    <div class="summary-card">
+                        <h3>Résumé de la commande</h3>
+                        <div class="summary-line">
+                            <span>Sous-total:</span>
+                            <span id="subtotal">0 DT</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Livraison:</span>
+                            <span id="shipping">7 DT</span>
+                        </div>
+                        <div class="summary-line total">
+                            <span>Total:</span>
+                            <span id="total">0 DT</span>
+                        </div>
+                        
+                        <button class="checkout-btn" onclick="proceedToCheckout()">
+                            Procéder au paiement
+                        </button>
+                        
+                        <div class="payment-methods">
+                            <h4>Méthodes de paiement acceptées</h4>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="empty-cart" id="emptyCart" style="display: none;">
+                <i class="fas fa-shopping-cart"></i>
+                <h2>Votre panier est vide</h2>
+                <p>Découvrez nos produits et ajoutez-les à votre panier</p>
+                <a href="/Html/index.html" class="continue-shopping">Continuer mes achats</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechShop</h3>
+                    <p>Votre partenaire high-tech de confiance en Tunisie depuis 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="/Html/index.html">Accueil</a></li>
+                        <li><a href="/Html/cart.html">Panier</a></li>
+                        <li><a href="/Html/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> +216 70 123 456</p>
+                    <p><i class="fas fa-envelope"></i> contact@TechShop.tn</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

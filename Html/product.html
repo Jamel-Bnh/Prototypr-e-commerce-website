@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produit - TechShop</title>
+    <link rel="stylesheet" href="/css/prod.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <h1><i class="fas fa-laptop"></i> TechShop</h1>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un produit...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                        <span class="cart-text">Panier</span>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="navbar">
+                <div class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/Html/index.html">Accueil</a></li>
+                    <li><a href="/Html/cart.html">Panier</a></li>
+                    <li><a href="/Html/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/Html/index.html">Accueil</a> > <span id="productCategory">Ordinateurs</span> > <span id="productName">MacBook Pro</span>
+        </div>
+    </div>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-grid">
+                <div class="product-images" style="margin-top: 90px;">
+                    <div class="main-image" >
+                        <img id="mainProductImage" src="/placeholder.svg?height=400&width=400" alt="Produit" >
+                    </div>
+                </div>
+                
+                <div class="product-info" style="margin-top: 50px;">
+                    <h1 id="productTitle">MacBook Pro 13" M2</h1>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span>(24 avis)</span>
+                    </div>
+                    
+                    <div class="product-price">
+                        <span class="current-price" id="productPrice">3,299 DT</span>
+                        <span class="old-price">3,599 DT</span>
+                        <span class="discount">-8%</span>
+                    </div>
+                    
+                    <div class="product-description">
+                        <h3>Description</h3>
+                        <p id="productDescription">
+                            MacBook Pro 13 pouces avec puce M2. Performance exceptionnelle, 
+                            autonomie toute la journée et écran Retina magnifique.
+                        </p>
+                    </div>
+                    
+                    <div class="product-specs">
+                        <h3>Spécifications</h3>
+                        <ul id="productSpecs">
+                            <li>Processeur: Apple M2</li>
+                            <li>Mémoire: 8 GB RAM</li>
+                            <li>Stockage: 256 GB SSD</li>
+                            <li>Écran: 13.3" Retina</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <label>Quantité:</label>
+                            <div class="quantity-controls">
+                                <button onclick="changeQuantity(-1)">-</button>
+                                <input type="number" id="quantity" value="1" min="1">
+                                <button onclick="changeQuantity(1)">+</button>
+                            </div>
+                        </div>
+                        
+                        <button class="add-to-cart-btn" onclick="addToCartFromProduct()">
+                            <i class="fas fa-shopping-cart"></i>
+                            Ajouter au panier
+                        </button>
+                        
+                        <button class="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                            Ajouter aux favoris
+                        </button>
+                    </div>
+                    
+                    <div class="product-features">
+                        <div class="feature">
+                            <i class="fas fa-truck"></i>
+                            <span>Livraison gratuite</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Garantie 2 ans</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-undo"></i>
+                            <span>Retour 30 jours</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2>Produits similaires</h2>
+            <div class="product-grid" id="relatedProducts">
+                <!-- Related products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechShop</h3>
+                    <p>Votre partenaire high-tech de confiance en Tunisie depuis 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="/Html/index.html">Accueil</a></li>
+                        <li><a href="/Html/cart.html">Panier</a></li>
+                        <li><a href="/Html/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> +216 70 123 456</p>
+                    <p><i class="fas fa-envelope"></i> contact@TechShop.tn</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

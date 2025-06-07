@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - TechShop</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/prod.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="/Html/index.html"><h1><i class="fas fa-laptop"></i> TechShop</h1></a>
+                </div>
+                <div class="header-actions" style="color: #dc3545;">
+                    <div class="auth-links" style="color: #dc3545;">
+                        <a href="sign-up.html" class="auth-link" style="color: #dc3545;">
+                            <i class="fas fa-user-plus"></i>
+                            Inscription
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container login-container" style="margin-top: 60px;">
+                <div class="auth-form-container">
+                    <div class="auth-header">
+                        <h1>Connexion</h1>
+                        <p>Connectez-vous à votre compte TechShop</p>
+                    </div>
+                    
+                    <form class="auth-form" id="loginForm" onsubmit="handleLogin(event)">
+                        <div class="form-group">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" id="loginEmail" name="email" required>
+                            <span class="error-message" id="loginEmailError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="loginPassword">Mot de passe</label>
+                            <div class="password-input">
+                                <input type="password" id="loginPassword" name="password" required>
+                                <button type="button" class="toggle-password" onclick="togglePassword('loginPassword')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <span class="error-message" id="loginPasswordError"></span>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="rememberMe" name="rememberMe" style="display: none;">
+                                <span class="checkmark"></span>
+                                Se souvenir de moi
+                            </label>
+                            <a href="#" class="link" onclick="showForgotPassword()">Mot de passe oublié ?</a>
+                        </div>
+                        
+                        <button type="submit" class="auth-btn">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Se connecter
+                        </button>
+                    </form>
+                    
+                    <div class="auth-footer">
+                        <p>Vous n'avez pas de compte ? <a href="sign-up.html" class="link">S'inscrire</a></p>
+                    </div>
+                    
+                    <div class="social-auth">
+                        <div class="divider">
+                            <span>ou</span>
+                        </div>
+                        <div class="social-buttons">
+                            <button class="social-btn google" onclick="socialLogin('google')">
+                                <i class="fab fa-google"></i>
+                                Continuer avec Google
+                            </button>
+                            <button class="social-btn facebook" onclick="socialLogin('facebook')">
+                                <i class="fab fa-facebook-f"></i>
+                                Continuer avec Facebook
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="auth-welcome">
+                    <div class="welcome-content">
+                        <h2>Bon retour !</h2>
+                        <p>Connectez-vous pour accéder à votre compte et profiter de tous nos services.</p>
+                        <div class="welcome-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Commandes sauvegardées</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Livraison rapide</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Support prioritaire</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forgot Password Modal -->
+    <div class="modal" id="forgotPasswordModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Réinitialiser le mot de passe</h2>
+                <button class="close-modal" onclick="closeForgotPassword()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form onsubmit="handleForgotPassword(event)">
+                <div class="form-group">
+                    <label for="resetEmail">Adresse email</label>
+                    <input type="email" id="resetEmail" required placeholder="Entrez votre adresse email">
+                </div>
+                <button type="submit" class="auth-btn">
+                    Envoyer le lien de réinitialisation
+                </button>
+            </form>
+        </div>
+    </div>
+
+   <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechShop</h3>
+                    <p>Votre partenaire high-tech de confiance en Tunisie depuis 2020.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="/Html/index.html">Accueil</a></li>
+                        <li><a href="/Html/cart.html">Panier</a></li>
+                        <li><a href="/Html/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> +216 70 123 456</p>
+                    <p><i class="fas fa-envelope"></i> contact@TechShop.tn</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Tunis, Tunisie</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechShop. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/JS/script.js"></script>
+    <script src="/JS/auth.js"></script>
+</body>
+</html>
