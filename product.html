@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="/css/prod.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
     <!-- Header (same as index.html) -->
     <header class="header">
@@ -19,32 +21,34 @@
                     <input type="text" placeholder="Rechercher un produit...">
                     <button><i class="fas fa-search"></i></button>
                 </div>
-                <div class="header-actions">
-                    <div class="cart-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">0</span>
-                        <span class="cart-text">Panier</span>
+                <div class="both-pan-cart">
+                    <div class="header-actions">
+                        <div class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                            <span class="cart-text">Panier</span>
+                        </div>
                     </div>
+                    <nav class="navbar">
+                        <div class="nav-toggle">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <ul class="nav-menu">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="cart.html">Panier</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            
-            <nav class="navbar">
-                <div class="nav-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="cart.html">Panier</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
     <!-- Breadcrumb -->
     <div class="breadcrumb">
         <div class="container">
-            <a href="index.html">Accueil</a> > <span id="productCategory">Ordinateurs</span> > <span id="productName">MacBook Pro</span>
+            <a href="index.html">Accueil</a> > <span id="productCategory">Ordinateurs</span> > <span
+                id="productName">MacBook Pro</span>
         </div>
     </div>
 
@@ -52,12 +56,12 @@
     <section class="product-detail">
         <div class="container">
             <div class="product-detail-grid">
-                <div class="product-images" style="margin-top: 90px;">
-                    <div class="main-image" >
-                        <img id="mainProductImage" src="/placeholder.svg?height=400&width=400" alt="Produit" >
+                <div class="product-images" style="margin-top:50px;">
+                    <div class="main-image">
+                        <img id="mainProductImage" src="/assets/iphone-15.jpg" alt="Produit">
                     </div>
                 </div>
-                
+
                 <div class="product-info" style="margin-top: 50px;">
                     <h1 id="productTitle">MacBook Pro 13" M2</h1>
                     <div class="product-rating">
@@ -70,21 +74,21 @@
                         </div>
                         <span>(24 avis)</span>
                     </div>
-                    
+
                     <div class="product-price">
                         <span class="current-price" id="productPrice">3,299 DT</span>
                         <span class="old-price">3,599 DT</span>
                         <span class="discount">-8%</span>
                     </div>
-                    
+
                     <div class="product-description">
                         <h3>Description</h3>
                         <p id="productDescription">
-                            MacBook Pro 13 pouces avec puce M2. Performance exceptionnelle, 
+                            MacBook Pro 13 pouces avec puce M2. Performance exceptionnelle,
                             autonomie toute la journée et écran Retina magnifique.
                         </p>
                     </div>
-                    
+
                     <div class="product-specs">
                         <h3>Spécifications</h3>
                         <ul id="productSpecs">
@@ -94,7 +98,7 @@
                             <li>Écran: 13.3" Retina</li>
                         </ul>
                     </div>
-                    
+
                     <div class="product-actions">
                         <div class="quantity-selector">
                             <label>Quantité:</label>
@@ -104,18 +108,18 @@
                                 <button onclick="changeQuantity(1)">+</button>
                             </div>
                         </div>
-                        
+
                         <button class="add-to-cart-btn" onclick="addToCartFromProduct()">
                             <i class="fas fa-shopping-cart"></i>
                             Ajouter au panier
                         </button>
-                        
+
                         <button class="wishlist-btn">
                             <i class="far fa-heart"></i>
                             Ajouter aux favoris
                         </button>
                     </div>
-                    
+
                     <div class="product-features">
                         <div class="feature">
                             <i class="fas fa-truck"></i>
@@ -172,4 +176,5 @@
 
     <script src="/js/script.js"></script>
 </body>
+
 </html>
